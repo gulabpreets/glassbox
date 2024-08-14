@@ -1,0 +1,481 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    
+    overflow-x: hidden;
+}
+.mt-h
+{
+    margin-top:20px;
+}
+.ft-w
+{
+    font-weight: 500 !important;
+}
+.pr
+{
+    padding-right: 20px !important;
+}
+:root
+{
+    --greyish-color: #282828;
+    --green-color:#05A565;
+    --black-color:#000;
+    --white-color:#fff;
+}
+.header{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: top 10s ease-in-out; 
+    position: relative;
+    z-index: 1000;
+}
+
+.hSticky{
+    position: fixed;
+    transition: top 50s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.hSticky> .headerContainer> .Hlogo img{
+ width:60%;
+}
+.header-wid
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-wid.fixed
+{
+    position: fixed;
+    top: 0; /* When fixed, set to the top */
+}
+.header-content
+{
+    width: 521px !important;
+    
+}
+.dis
+{
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+}
+
+.about1
+{
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+.heading h1
+{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 115px;
+    line-height: 1;
+    color: var(--black-color);
+    font-family: "Roboto", sans-serif;
+}
+.animate-heading{
+    display: inline-block;
+    
+}
+.animate-heading h1{
+    padding-left: 20px;
+}
+.text
+{
+    font-size: 110px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+            typing 2s steps(10),
+            cursor .4s step-end infinite alternate;
+
+}
+@keyframes cursor
+{
+    50% {
+        border-color: transparent;
+        
+    }
+}
+@keyframes typing 
+{
+    from{
+        width: 0;
+        
+    }
+    to {
+        width: 100%;
+        background-color: orangered;
+    }
+    
+}
+.heading p{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 15px;
+    color: var(--black-color);
+
+    font-family: "Roboto", sans-serif;
+
+
+}
+.img-custom-height {
+    height: 100%; /* Desired height */
+    transform: translateY(-10%); /* Adjust based on height reduction */
+    object-fit: cover;
+}
+
+.carousel-caption h1{
+    font-size: 75px;
+    font-weight: 600;
+    color: #fff;
+    font-family: "Sora", sans-serif;
+    line-height: 1.1;
+    max-width:530px;
+}
+.clients
+{
+    background-color: var(--greyish-color);
+    
+    
+}
+.client-content
+{
+    height: 470px;
+}
+.client-head h1{
+    font-family: "Roboto", sans-serif;
+    padding-top: 70px;
+    color: white;
+    font-weight: 600;
+    font-size: 75px;
+    text-transform: capitalize;
+}
+.client-logos
+{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo1 img{
+    color: #000;
+}
+.signupnews 
+{
+    background: url(./assets/home_bg.png) 50% 50% no-repeat;
+    background-size: cover;
+    height: 360px;
+}
+
+.newsinner 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img img 
+{
+    max-width: 100%;
+    height: auto;
+}
+::placeholder
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--black-color);
+
+}
+
+.signupform
+{
+    max-width: 500px;
+    color: black; /* Adjust text color if needed */
+    padding-top: 70px;
+    padding-left: 30px;
+    margin-right: 250px;
+    margin-top: 30px;
+
+}
+.signupform h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.signupform p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.signupform input[type="email"] 
+{
+    width:120%;
+    padding: 10px;
+    margin-bottom: 10px;
+     font-family: "Roboto Mono", monospace;
+     font-size: 20px;
+    font-weight: 600;
+
+    color: var(--black-color);
+}
+.signupform button 
+{
+    padding: 10px 12px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+}
+.signupform img{
+    height: 18px;
+}
+.signupform img:hover{
+    padding-left: 6px;
+}
+
+.footer2
+{
+    height:300px;
+    background-color: var(--greyish-color);
+}
+.foot-heading
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.head-content
+{
+    margin-top: 50px;
+    padding:10px;
+}
+.head-content h2{
+    color: var(--white-color);
+}
+.head-image
+{
+    margin-top: 40px;
+    
+    padding-right: 40px;
+}
+.head-image img{
+    padding-left: 41px;
+    padding-top: 4px;
+}
+.footer-hr {
+    width: 85%;
+    border: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+.big-div
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.contents a,.content a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.contents a:hover, .content a:hover{
+    text-decoration:underline;
+}
+.content-div {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    justify-content: space-between; /* Evenly distributes space between items */
+}
+
+.contents {
+    flex: 1 1 30%; /* Allows items to grow and shrink, with a base size of 30% */
+    text-align: center; /* Centers text within each content */
+    margin: 5px 0 5px 0; /* Optional: adds space around each item */
+}
+.box1
+{
+    height: 20px;
+    width: 20px;
+    background-color: wheat;
+    margin: 10px;
+}
+.box-div
+{
+    display: flex;
+}
+.content{
+    margin: 2px;
+     flex: 2 1 30%; /* Allows items to grow and shrink, with a base size of 30% */
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+
+.footer-3
+{
+    background-color: var(--white-color);
+}
+
+.foot-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+}
+.foot-1 a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 500;
+
+}
+.foot-1 a:hover{
+    font-weight:700;
+}
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+.main
+{
+    height: 600px;
+}
+.class-1
+{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column ;
+    padding: 20px 0 !important;
+}
+.para
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    margin-right: 400px;
+     cursor: pointer;
+}
+
+.class-2
+{
+    height:50%;
+}
+.box
+{
+    background-color: green;
+    width: 25%;
+    height: 300px;
+}
+.box3
+{
+    width: 25%;
+    height: 300px;
+    background-color: blue;
+}
+.box2
+{
+    width: 25%;
+    height: 300px;
+    background-color: pink;
+}
+.box4
+{
+    background-color: wheat;
+}
+.box5
+{
+    background-color: orange;
+}
+
+.heading h2
+{
+    margin-bottom: 20px;
+    width:460px;
+    height: 115px;
+    font-size: 40px;
+    margin-left: 100px;
+}
+.para a{
+    width: 92px;
+    height: 21px;
+}
+.p-icon img{
+    padding-left: 20px;
+}
+.p-icon img:hover{
+    padding-left: 26px;
+} 
+.class-2-img img{
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+/* Custom Swiper pagination bullets */
+.swiper-pagination-bullet {
+    width: 10px !important; /* Adjust the size as needed */
+    height: 10px !important; /* Adjust the size as needed */
+    background-color: #bfbfbf !important;
+    border-radius: 0 !important; /* Change from circle to square */
+    opacity: 1 !important; /* Ensure full opacity for the bullets */
+}
+
+/* Active bullet style */
+.swiper-pagination-bullet-active {
+    background-color: black !important; /* Ensure active bullet color is also black */
+}
+.swiper-pagination {
+    position: absolute;
+    right: 0; /* Adjust the distance from the right as needed */
+    top: 50%;
+    transform: translateX(-50%);
+    right: 200px !important;;
+    
+}

@@ -1,0 +1,92 @@
+
+$('.menu_icon_sec > a').on('click', function(){
+    $('body').addClass('active_menu');
+});
+
+$('.cross_icon span').on('click', function(){
+    $('body').removeClass('active_menu');
+});
+
+$(document).ready(function () {
+    $('.nav li a + i').on("click", function (e) {
+        e.preventDefault();
+        $(this).parent().find('>ul').slideToggle(100);
+    });
+});
+
+
+$(window).scroll(function(){
+	var sticky = $('header'),
+	scroll = $(window).scrollTop();
+	if (scroll >= 150){
+		sticky.addClass('fixed_header');
+	}
+	else {
+		sticky.removeClass('fixed_header');
+	  }
+  });
+
+$('.main_menu_sec a[href^=\\#]').on('click', function(event){     
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+
+var swiper = new Swiper(".banner_slider", {
+	slidesPerView: 1,
+  	spaceBetween: 0,
+	pagination: {
+	  el: ".banner_pagination",
+	  clickable: true,
+	},
+	speed: 500,
+	loop: true,
+	autoplay: {
+	  delay: 3000,
+	  disableOnInteraction: false,
+	},
+});
+
+var swiper = new Swiper(".home_slider", {
+	slidesPerView: 1,
+  	spaceBetween: 0,
+	pagination: {
+	  el: ".home_pagination",
+	  clickable: true,
+	},
+	speed: 500,
+	loop: true,
+	autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
+});
+
+var texts = [
+	{ text: 'consulting', classes: ['consulting'] },
+	{ text: 'Design', classes: ['design'] },
+	{ text: 'Experience', classes: ['experience'] },
+	{ text: 'innovation', classes: ['innovation'] },
+	{ text: 'creative', classes: ['creative'] },
+	{ text: 'technology', classes: ['technology'] }
+];
+
+var typed = new Typed('.text_typed', {
+	strings: texts.map(item => item.text),
+	typeSpeed: 100,
+	backSpeed: 50,
+	loop: true,
+	onStringTyped: function(arrayPos, self) {
+	var classes = texts[arrayPos].classes;
+	self.el.className = 'text_typed ' + classes.join(' ');
+	}
+});
+
+
+
+
+
+$(document).ready(function(){
+	$('.h_height').matchHeight();
+});
+
+
